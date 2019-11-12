@@ -1,14 +1,15 @@
 #!/bin/bash
 
 file=$1
+text=$2
+count=$3
 
 if [ -f $file ]
 then
 echo "Error. File already exists." 
 else
-touch $1
-for (( fold = 0 ; fold < $3 ; fold++ ))
+for (( fold = 0 ; fold < $count ; fold++ ))
 do
-echo $2 >> $1
+echo $text >> $file
 done
 fi
