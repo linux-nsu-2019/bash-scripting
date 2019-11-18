@@ -1,0 +1,12 @@
+#!/bin/bash
+File=$1
+if [ -f "$File" ];
+then
+	echo "Ошибка: такой файл уже существует" 
+else
+	touch $1
+	for (( i= 0 ; i < $3 ; i++ )); 
+do
+	echo $2 >> $1
+	done
+fi
