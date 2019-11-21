@@ -1,0 +1,12 @@
+#!/bin/bash
+FILENAME=$1
+TEXT=$2
+COUNT=$3
+if [[ -e $FILENAME ]]; then
+   echo "ERROR: $FILENAME EXIST"
+else
+touch $FILENAME
+for ((k = 1 ; k <= $COUNT ; k++)); do
+ echo $TEXT >> $FILENAME
+done
+fi
